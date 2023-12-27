@@ -1,0 +1,899 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Nanum+Brush+Script&family=Poppins:wght@300;500;600;800;900&family=Roboto:wght@500;700&family=Sono:wght@200&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  /* -webkit-text-stroke: .2px white;  border dla tekstu */
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.sec {
+  min-height: 100vh;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  background-color: #121113;
+}
+header .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+header .logo {
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+header .inputCon {
+  position: relative;
+}
+header input {
+  padding: 10px 26px 10px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  background-color: rgba(128, 128, 128, 0.9);
+  color: white;
+}
+header input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+header input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+header .searchIcon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+header .offer {
+  font-size: 1.1rem;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #379E63;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+header a {
+  font-size: 1.1rem;
+  color: #cfcfcf;
+}
+header a:hover {
+  color: white;
+}
+@media (max-width: 620px) {
+  header .inputCon {
+    display: none;
+  }
+}
+@media (max-width: 430px) {
+  header .logo {
+    font-size: 1.5rem;
+  }
+  header .offer {
+    font-size: 0.9rem;
+  }
+  header nav {
+    flex-wrap: wrap;
+  }
+  header a {
+    font-size: 0.9rem;
+  }
+}
+
+/*
+<header>
+        <div class="top">
+            <div class="logo">.sneakers</div>
+            <div class="inputCon">
+                <input type="text">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <span class="offert">Limited Offer!</span>
+        </div>
+        <nav>
+            <a href="#">Air Gorge</a>
+*/
+.displayShoes {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
+  background: url("https://png.pngtree.com/background/20230412/original/pngtree-background-wall-black-bricks-black-brick-wall-wall-texture-background-picture-image_2399713.jpg") no-repeat center center/cover;
+  background-color: white;
+  overflow-x: hidden;
+}
+.displayShoes .shoesCards {
+  width: 500vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.7s ease;
+}
+.displayShoes .card {
+  width: 100vw;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 10px;
+}
+.displayShoes .price {
+  font-size: 8rem;
+  font-weight: 300;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+.displayShoes .airForcePrice {
+  color: #379E63;
+}
+.displayShoes .airJordanPrice {
+  color: #66329A;
+}
+.displayShoes .blazerNikePice {
+  color: #028082;
+}
+.displayShoes .craterPrice {
+  color: #6494EE;
+}
+.displayShoes .hippiePrice {
+  color: #7c7350;
+}
+.displayShoes img {
+  border-radius: 50%;
+  overflow: visible;
+}
+.displayShoes .airForce {
+  background-color: #379E63;
+}
+.displayShoes .airJordan {
+  background-color: #66329A;
+}
+.displayShoes .blazerNike {
+  background-color: #028082;
+}
+.displayShoes .crater {
+  background-color: #6494EE;
+}
+.displayShoes .hippie {
+  background-color: #7c7350;
+}
+.displayShoes .shoeInfo {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+  font-size: 4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.displayShoes .buyNowBtn {
+  padding: 7px 20px;
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border: 1px solid white;
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+.displayShoes .buyNowBtn:hover {
+  background-color: #fff;
+  color: #000;
+}
+@media (max-width: 1440px) {
+  .displayShoes .price {
+    font-size: 5.2rem;
+  }
+  .displayShoes img {
+    width: 500px;
+  }
+  .displayShoes .shoeInfo {
+    font-size: 2rem;
+  }
+  .displayShoes .buyNowBtn {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 1090px) {
+  .displayShoes .price {
+    font-size: 4.7rem;
+  }
+  .displayShoes img {
+    width: 450px;
+  }
+  .displayShoes .shoeInfo {
+    font-size: 1.6rem;
+  }
+  .displayShoes .buyNowBtn {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 870px) {
+  .displayShoes .price {
+    font-size: 4rem;
+  }
+  .displayShoes img {
+    width: 375px;
+  }
+  .displayShoes .shoeInfo {
+    font-size: 1.2rem;
+  }
+  .displayShoes .buyNowBtn {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 720px) {
+  .displayShoes .price {
+    font-size: 3.6rem;
+  }
+  .displayShoes img {
+    width: 325px;
+  }
+  .displayShoes .shoeInfo {
+    font-size: 1rem;
+  }
+  .displayShoes .buyNowBtn {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 635px) {
+  .displayShoes .price {
+    font-size: 3.4rem;
+  }
+  .displayShoes img {
+    width: 250px;
+  }
+  .displayShoes .shoeInfo {
+    font-size: 0.8rem;
+  }
+  .displayShoes .buyNowBtn {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 530px) {
+  .displayShoes .card {
+    position: relative;
+    gap: 0;
+  }
+  .displayShoes .price {
+    align-self: end;
+    font-size: 2.7rem;
+  }
+  .displayShoes p {
+    display: none;
+  }
+  .displayShoes img {
+    width: 150px;
+  }
+  .displayShoes .buyNowBtn {
+    position: absolute;
+    right: 35px;
+    font-size: 1rem;
+    padding: 2px;
+  }
+}
+@media (max-width: 430px) {
+  .displayShoes .card {
+    padding-bottom: 20px;
+  }
+  .displayShoes .price {
+    font-size: 2rem;
+  }
+  .displayShoes img {
+    width: 150px;
+  }
+  .displayShoes .buyNowBtn {
+    right: 20px;
+    font-size: 0.8rem;
+  }
+}
+
+/*
+    <section class="sec displayShoes">
+        <ul class="shoesCards">
+            <div class="card">
+                <div class="price">$119</div>
+                <img src="https://github.com/safak/youtube/blob/html-css-js-ecommerce/img/air.png?raw=true" alt="Image of air forge">
+                <div class="shoeInfo">
+                    <p>Air forge <br> new <br> season</p>
+                    <button class="buyNowBtn">Buy now!</
+*/
+.aboutUs,
+.infoItem {
+  display: flex;
+  align-items: center;
+}
+
+.aboutUs {
+  justify-content: center;
+}
+.aboutUs .infoList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0 30px;
+}
+.aboutUs .infoItem {
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px 30px;
+}
+.aboutUs h3 {
+  font-size: 2rem;
+}
+.aboutUs p {
+  text-align: center;
+  font-size: 1.8rem;
+}
+.aboutUs i {
+  font-size: 5rem;
+  color: #5C947C;
+}
+@media (max-width: 1335px) {
+  .aboutUs .infoList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .aboutUs h3 {
+    font-size: 1.6rem;
+  }
+  .aboutUs p {
+    max-width: 230px;
+    font-size: 1.5rem;
+  }
+  .aboutUs i {
+    font-size: 4.5rem;
+  }
+}
+@media (max-width: 566px) {
+  .aboutUs .infoList {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .aboutUs .infoItem {
+    gap: 5px;
+  }
+  .aboutUs h3 {
+    font-size: 1.4rem;
+  }
+  .aboutUs p {
+    max-width: 250px;
+    font-size: 1.2rem;
+  }
+  .aboutUs i {
+    font-size: 3.5rem;
+  }
+}
+
+/*
+    <section class="sec aboutUs">
+        <ul class="infoList">
+            <li class="infoItem">
+                <i class="fa-solid fa-truck"></i>
+                <h3>Free Shipping</h3>
+                <p>
+*/
+.chosenShoe {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mainCon {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+  padding: 0 35px;
+  background-color: #F5F4F6;
+  -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+}
+.mainCon img {
+  width: 600px;
+}
+.mainCon .shoeDetails {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.mainCon .shoeName {
+  font-size: 3.5rem;
+}
+.mainCon .shoePrice {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+.mainCon p {
+  font-size: 1.5rem;
+}
+.mainCon .colorsCon,
+.mainCon .sizesCon {
+  display: flex;
+  gap: 10px;
+}
+.mainCon .chooseColor {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+}
+.mainCon .chooseColor,
+.mainCon .size,
+.mainCon .buyNowBtn {
+  cursor: pointer;
+}
+.mainCon .firstColor {
+  background-color: #000;
+}
+.mainCon .secondColor {
+  background-color: #008;
+}
+.mainCon .size {
+  padding: 5px 20px;
+  font-size: 1.1rem;
+  border: 1px solid #000;
+}
+.mainCon .size.active,
+.mainCon .secondSize.active {
+  background-color: #000;
+  color: #fff;
+}
+.mainCon .buyNowBtn {
+  align-self: end;
+  padding: 8px 20px;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #777;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+@media (max-width: 1310px) {
+  .mainCon img {
+    width: 40vw;
+  }
+  .mainCon .shoeName {
+    font-size: 3rem;
+  }
+  .mainCon .shoePrice {
+    font-size: 2rem;
+  }
+  .mainCon p {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 960px) {
+  .mainCon .shoeDetails {
+    gap: 8px;
+  }
+  .mainCon .shoeName {
+    font-size: 2.7rem;
+  }
+  .mainCon .shoePrice {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .mainCon {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+  .mainCon .shoeDetails {
+    align-items: center;
+    gap: 15px;
+  }
+  .mainCon img {
+    width: 400px;
+  }
+  .mainCon p {
+    text-align: center;
+    max-width: 550px;
+  }
+}
+@media (max-width: 860px) and (max-width: 570px) {
+  .mainCon .shoeDetails {
+    gap: 8px;
+  }
+  .mainCon .shoeName {
+    font-size: 1.6rem;
+  }
+  .mainCon .shoePrice {
+    font-size: 1.4rem;
+  }
+  .mainCon p {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+  .mainCon .buyNowBtn {
+    align-self: center;
+  }
+}
+@media (max-width: 860px) and (max-width: 430px) {
+  .mainCon img {
+    width: 250px;
+  }
+}
+.paymentCon {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: start;
+  box-shadow: 0 0 10px 4px #999;
+  background-color: white;
+}
+.paymentCon .personalInfoCon,
+.paymentCon li {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.paymentCon .close {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  font-size: 2rem;
+  padding: 0 3px;
+  background-color: #777;
+  color: white;
+}
+.paymentCon h3 {
+  padding-top: 20px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ccc;
+}
+.paymentCon .personalInfoCon {
+  width: 100%;
+}
+.paymentCon .personalInfoCon,
+.paymentCon .cardChoices,
+.paymentCon .cardDetails {
+  padding: 10px 50px;
+}
+.paymentCon label {
+  font-size: 1.3rem;
+}
+.paymentCon input {
+  padding: 0 10px 10px;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #bbb;
+}
+.paymentCon i {
+  font-size: 3.5rem;
+}
+.paymentCon i,
+.paymentCon .checkOutBtn {
+  cursor: pointer;
+}
+.paymentCon .cardDetails {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-bottom: 20px;
+}
+.paymentCon .cardNameInput {
+  grid-column: 1/4;
+}
+.paymentCon .checkOutBtn {
+  width: 100%;
+  padding: 20px;
+  font-size: 1.3rem;
+  background-color: #38aa69;
+  color: white;
+}
+
+@media (max-width: 620px) {
+  .paymentCon {
+    width: 450px;
+  }
+  .paymentCon .cardDetails {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .paymentCon .cardNameInput {
+    grid-column: auto;
+  }
+}
+@media (max-width: 530px) {
+  .paymentCon {
+    width: 325px;
+  }
+  .paymentCon h3 {
+    font-size: 1.3rem;
+  }
+  .paymentCon label {
+    font-size: 1rem;
+  }
+  .paymentCon .personalInfoCon,
+  .paymentCon .cardDetails {
+    gap: 5px;
+  }
+  .paymentCon .cardChoices h3 {
+    padding-top: 5px;
+  }
+}
+/*
+    <div class="cardDetails">
+                <input type="text" placeholder="Card Number">
+                <input type="number" min="1" max="12" placeholder="mm">
+                <input type="number" min="1923" max="2024" placeholder="yyyy">
+                <input type="password" placeholder="cvv">
+            </div>
+            <button class="checkOutBtn">
+                Checkout!
+*/
+.lifeChange {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lifeChange .cardsCon {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  padding: 20px;
+}
+.lifeChange .card {
+  max-width: 400px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 20px;
+}
+.lifeChange .card:nth-child(2) {
+  flex-direction: column-reverse;
+}
+.lifeChange h4 {
+  font-weight: 600;
+  font-size: 2.1rem;
+}
+.lifeChange img {
+  width: 100%;
+}
+@media (max-width: 1060px) {
+  .lifeChange h4 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 860px) {
+  .lifeChange .card {
+    max-width: 350px;
+  }
+  .lifeChange h4 {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 750px) {
+  .lifeChange .cardsCon {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .lifeChange .card {
+    gap: 5px;
+  }
+  .lifeChange h4 {
+    font-size: 1.6rem;
+  }
+}
+
+/*
+    <section class="sec lifeChange">
+        <ul class="cardsCon">
+            <li class="card">
+                <h4>Be Yourself!</h4>
+                <img>
+*/
+.newSeason {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.newSeason img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.newSeason .card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  background-color: #000;
+  color: #fff;
+}
+.newSeason h5 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.newSeason h5,
+.newSeason .chooseStyle {
+  text-transform: uppercase;
+}
+.newSeason h4 {
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+.newSeason .chooseStyle {
+  padding: 15px 25px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+@media (max-width: 1170px) {
+  .newSeason h5 {
+    font-size: 1.4rem;
+  }
+  .newSeason h4 {
+    font-size: 2.6rem;
+  }
+  .newSeason .chooseStyle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 955px) {
+  .newSeason {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  img {
+    max-height: 700px;
+  }
+  .card {
+    padding: 40px 0;
+  }
+}
+/*
+ <section class="sec newSeason">
+        <img class="bgImg img1"></div>
+        <div class="card">
+            <h5>Winter New Arrivals</h5>
+            <h4>New Season</h4>
+            <h4>New Collection</h4>
+            <button class="chooseStyle">
+                Choose Your Style
+            </button>
+        </div>
+        <img class="bgImg img2"></div>
+*/
+footer .footerList {
+  display: grid;
+  justify-items: center;
+  justify-content: space-between;
+  grid-template-columns: repeat(4, 1fr);
+}
+footer li {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+footer h6 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+footer a {
+  align-self: start;
+  font-size: 1.3rem;
+}
+footer .inputCon {
+  display: flex;
+  gap: 8px;
+  position: relative;
+}
+footer input {
+  padding: 5px 8px;
+  font-size: 1.5rem;
+  border: 1px solid black;
+}
+footer .joinBtn {
+  padding: 5px 8px;
+  font-size: 1.3rem;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+footer .links {
+  display: flex;
+  gap: 20px;
+  font-size: 2.3rem;
+  cursor: pointer;
+}
+footer p {
+  padding-top: 30px;
+  font-size: 1.3rem;
+  color: #888;
+}
+@media (max-width: 960px) {
+  footer .footerList {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 25px;
+  }
+  footer li:last-child {
+    width: 100%;
+    align-items: center;
+    grid-column: 1/4;
+    background-color: #eee;
+  }
+  footer li:last-child {
+    text-align: center;
+  }
+}
+@media (max-width: 578px) {
+  footer li {
+    padding: 5px;
+  }
+  footer h6 {
+    font-size: 1.3rem;
+  }
+  footer a {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 430px) {
+  footer h6 {
+    font-size: 1.1rem;
+  }
+  footer a {
+    font-size: 0.9rem;
+  }
+  footer input {
+    width: 250px;
+  }
+  footer p {
+    font-size: 1.1rem;
+  }
+}
+
+/*
+<li class="other">
+    <div class="newsletterCon">
+        <h6>Subscribe to our newsletter</h6>
+        <input type="email" placeholder="your@email.com">
+        <button class="joinBtn">Join!</button>
+    </div>
+    <div class="socials">
+        <h6>Follow Us</h6>
+        <div class="links">
+            <i class="fa-brands fa-whatsapp"></i>
+        </div>
+    </div>
+    <p>©Lama Dev. All rights reserved 2023 
+*//*# sourceMappingURL=style.css.map */

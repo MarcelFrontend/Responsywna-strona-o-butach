@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../img/crimeWarningActive.png">
+    <title>Projekt 3</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../../scss/style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="top">
+            <div class="logo">.sneakers</div>
+            <div class="inputCon">
+                <input type="text" placeholder="Search">
+                <i class="fa-solid fa-magnifying-glass searchIcon"></i>
+            </div>
+            <span class="offer">Limited Offer!</span>
+        </div>
+        <nav>
+            <a class="shoeLink" href="#">Air Forge</a>
+            <a class="shoeLink" href="#">Jordan</a>
+            <a class="shoeLink" href="#">Blazer</a>
+            <a class="shoeLink" href="#">Crater</a>
+            <a class="shoeLink" href="#">Hippe</a>
+        </nav>
+    </header>
+    <section class="sec displayShoes">
+        <ul class="shoesCards">
+            <li class="card">
+                <div class="airForcePrice price">$119</div>
+                <img class="airForce"
+                    src="https://github.com/safak/youtube/blob/html-css-js-ecommerce/img/air.png?raw=true"
+                    alt="Image of air force">
+                <div class="shoeInfo">
+                    <p>Air Force <br> new <br> season</p>
+                    <button class="buyNowBtn">Buy now!</button>
+                </div>
+            </li>
+            <li class="card">
+                <div class="airJordanPrice price">$149</div>
+                <img class="airJordan"
+                    src="https://github.com/safak/youtube/blob/html-css-js-ecommerce/img/jordan.png?raw=true"
+                    alt="Image of air jordan">
+                <div class="shoeInfo">
+                    <p>Air Jordan <br> new <br> season</p>
+                    <button class="buyNowBtn">Buy now!</button>
+                </div>
+            </li>
+            <li class="card">
+                <div class="blazerNikePice price">$109</div>
+                <img class="blazerNike"
+                    src="https://github.com/safak/youtube/blob/html-css-js-ecommerce/img/blazer.png?raw=true"
+                    alt="Image of blazer nike">
+                <div class="shoeInfo">
+                    <p>Blazer Nike <br> new <br> season</p>
+                    <button class="buyNowBtn">Buy now!</button>
+                </div>
+            </li>
+            <li class="card">
+                <div class="craterPrice price">$129</div>
+                <img class="crater"
+                    src="https://github.com/safak/youtube/blob/html-css-js-ecommerce/img/crater.png?raw=true"
+                    alt="Image of crater nike">
+                <div class="shoeInfo">
+                    <p>Crater <br> new <br> season</p>
+                    <button class="buyNowBtn">Buy now!</button>
+                </div>
+            </li>
+            <li class="card">
+                <div class="hippiePrice price">$99</div>
+                <img class="hippie"
+                    src="https://github.com/safak/youtube/blob/html-css-js-ecommerce/img/hippie.png?raw=true"
+                    alt="Image of blazer nike">
+                <div class="shoeInfo">
+                    <p>Hippie nike <br> new <br> season</p>
+                    <button class="buyNowBtn">Buy now!</button>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section class="sec aboutUs">
+        <ul class="infoList">
+            <li class="infoItem">
+                <i class="fa-solid fa-truck"></i>
+                <h3>Free Shipping</h3>
+                <p>Free worldwide shipping on all orders.</p>
+            </li>
+            <li class="infoItem">
+                <i class="fa-solid fa-box"></i>
+                <h3>30 days return</h3>
+                <p>No question return and easy refund in 14 days.</p>
+            </li>
+            <li class="infoItem">
+                <i class="fa-solid fa-credit-card"></i>
+                <h3>Gift card</h3>
+                <p>Buy gift cards and use coupon codes easily.</p>
+            </li>
+            <li class="infoItem">
+                <i class="fa-solid fa-paper-plane"></i>
+                <h3>Contact us!</h3>
+                <p>Keep in touch via email and support system.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="sec chosenShoe">
+        <div class="mainCon">
+            <div class="imgCon">
+                <img class="shoeImg"
+                    src="https://github.com/safak/youtube/blob/html-css-js-ecommerce/img/air.png?raw=true"
+                    alt="Image of air jordan">
+            </div>
+            <div class="shoeDetails">
+                <h3 class="shoeName">Air Max</h3>
+                <span class="price shoePrice">$199</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, quos! Voluptate et, qui veniam nobis
+                    praesentium distinctio repellendus.</p>
+                <div class="colorsCon">
+                    <div class="chooseColor firstColor"></div>
+                    <div class="chooseColor secondColor"></div>
+                </div>
+                <div class="sizesCon">
+                    <div class="size firstSize">41</div>
+                    <div class="size secondSize active">42</div>
+                    <div class="size thirdSize">43</div>
+                </div>
+                <button class="buyNowBtn" id="buyBtn">Buy now!</button>
+            </div>
+        </div>
+        <div class="paymentCon">
+            <i class="fa-solid fa-close close"></i>
+            <ul class="personalInfoCon">
+                <li class="nameSurname">
+                    <h3>Personal Information</h3>
+                    <label>Name and Surname</label>
+                    <input type="text" placeholder="John Doe">
+                </li>
+                <li class="phoneNumber">
+                    <label>Phone Number</label>
+                    <input type="tel" placeholder="+1 234 5678">
+                </li>
+                <li class="address">
+                    <label>Address</label>
+                    <input type="text" placeholder="Elton St. 41 99-221">
+                </li>
+            </ul>
+            <div class="cardChoices">
+                <h3>Card Information</h3>
+                <i class="fa-brands fa-cc-visa"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
+            </div>
+            <div class="cardDetails">
+                <input class="cardNameInput" type="text" placeholder="Card Number">
+                <input type="number" min="1" max="12" placeholder="mm">
+                <input type="number" min="1923" max="2024" placeholder="yyyy">
+                <input type="password" placeholder="cvv">
+            </div>
+            <button class="checkOutBtn">
+                Checkout!
+            </button>
+        </div>
+    </section>
+
+    <section class="sec lifeChange">
+        <ul class="cardsCon">
+            <li class="card">
+                <h4>Be Yourself!</h4>
+                <img src="https://images.pexels.com/photos/9295809/pexels-photo-9295809.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                    alt="A man standing comfortably">
+            </li>
+            <li class="card">
+                <h4>This is the First Day of Your New Life</h4>
+                <img src="https://images.pexels.com/photos/1040427/pexels-photo-1040427.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                    alt="Woman tying her shoes">
+            </li>
+            <li class="card">
+                <h4>Just Do it!</h4>
+                <img src="https://images.pexels.com/photos/7856965/pexels-photo-7856965.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                    alt="A man running">
+            </li>
+        </ul>
+    </section>
+
+    <section class="sec newSeason">
+        <img src="https://images.pexels.com/photos/4753986/pexels-photo-4753986.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+            class="bgImg img1">
+        <div class="card">
+            <h5>Winter New Arrivals</h5>
+            <h4>New Season</h4>
+            <h4>New Collection</h4>
+            <button class="chooseStyle">
+                Choose Your Style
+            </button>
+        </div>
+        <img src="https://images.pexels.com/photos/7856965/pexels-photo-7856965.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+            src="https://images.pexels.com/photos/7856965/pexels-photo-7856965.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+            class="bgImg img2">
+    </section>
+
+    <footer>
+        <ul class="footerList">
+            <li>
+                <h6>About Us</h6>
+                <a href="#">Company</a>
+                <a href="#">Contact</a>
+                <a href="#">Careers</a>
+                <a href="#">Affiliates</a>
+                <a href="#">Stores</a>
+            </li>
+            <li>
+                <h6>Useful Links</h6>
+                <a href="#">Support</a>
+                <a href="#">Refund</a>
+                <a href="#">FAQ</a>
+                <a href="#">Feedback</a>
+                <a href="#">Stories</a>
+            </li>
+            <li>
+                <h6>Products</h6>
+                <a href="#">Air Max</a>
+                <a href="#">Air Jordan</a>
+                <a href="#">Blazer</a>
+                <a href="#">Crater</a>
+                <a href="#">Hippie</a>
+            </li>
+            <li>
+                <div class="newsletterCon">
+                    <h6>Subscribe to our newsletter</h6>
+                    <div class="inputCon">
+                        <input type="email" placeholder="your@email.com">
+                        <button class="joinBtn">Join!</button>
+                    </div>
+                </div>
+                <div class="socials">
+                    <h6>Follow Us</h6>
+                    <div class="links">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-instagram">
+                        </i>
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                </div>
+                <p>©Lama Dev. All rights reserved 2022</p>
+            </li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>
